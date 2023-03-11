@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilha</title>
+</head>
+<body>
+<!-- FORMULARIO PARA ADICIONAR E RETIRAR ALGUÉM DA FILA -->
+
+    <form action="">
+    <input type="text" name="" id="nome">
+    <input type="button" value="Inserir" onclick="inserirNaPilha()"></input>
+    <input type="button" value="Retirar" onclick="retirarDaPilha()"></input>
+    </form>
+    <h2>Pilha de Pessoas:</h2>
+    <h2 id="pilha"></h2>
+
+    <br>
+    <br>
+    <br>
+    <h2>Pilha de Pessoas Atendidas:</h2>
+    <h2 id="pAtendidas"></h2>
+    
+    <script>
+//CRIAÇÃO FILA
+    let pilha = document.getElementById("pilha");
+    let pilhaPessoas = [];
+    let pessoasAtendidas = [];
+
+//FUNÇÃO PARA INSERIR E RETIRAR DA FILA 
+    
+    function inserirNaPilha(){
+        pilhaPessoas.push(document.getElementById("nome").value);
+        pilha.innerHTML = pilhaPessoas;
+    
+}
+    function retirarDaPilha(){
+        let elemento = pilhaPessoas.length -1;
+        pessoasAtendidas.push(pilhaPessoas[elemento]);
+        pilhaPessoas.pop(document.getElementById("nome").value);
+        pilha.innerHTML = pilhaPessoas;
+        pAtendidas.innerHTML = pessoasAtendidas;
+}
+</script>
+    
+</body>
+</html>
